@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cart & Checkout — Arlo Clay Studio | Brittany Nation</title>
+<meta name="description" content="Cart and checkout page for fictional Arlo Clay Studio — two items, flat shipping shown as its own line, and an order total of $74 that matches the shop and product pages.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cart & Checkout — Arlo Clay Studio | Brittany Nation">
+<meta property="og:description" content="Checkout page concept — every cost as its own line, shipping stated plainly, and a $74 total with no surprises. Cobalt glaze, peach clay &amp; porcelain. Designed by Brittany Nation.">
+<meta property="og:url" content="https://brittanynation.github.io/arlo-clay-shop/checkout.html">
+<meta property="og:image" content="https://brittanynation.github.io/arlo-clay-shop/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cart & Checkout — Arlo Clay Studio | Brittany Nation">
+<meta name="twitter:description" content="Checkout page concept — every cost as its own line, shipping stated plainly, and a $74 total with no surprises. Cobalt glaze, peach clay &amp; porcelain. Designed by Brittany Nation.">
+<meta name="twitter:image" content="https://brittanynation.github.io/arlo-clay-shop/og-image.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="wrap"><div class="brand">BRITTANY NATION <span>• FRONT-END DESIGN</span></div><nav class="nav" aria-label="Project"><a href="index.html">Shop</a><a href="product.html">Product</a><a href="checkout.html" aria-current="page">Cart &amp; Checkout</a><a href="https://github.com/BrittanyNation/arlo-clay-shop">GitHub Repo</a></nav></div></header>
+<main id="main"><div class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Cart &amp; Checkout • Arlo Clay Studio</p>
+    <h1>Your basket, <em>with every cost in the open.</em></h1>
+    <p class="lede">A calm checkout page: the items named the same way the shop named them, shipping as its own line instead of a surprise, and the total repeated on the button that finishes the order.</p>
+  </section>
+  <div class="grid2">
+    <form aria-label="Checkout details">
+      <h3 style="margin-top:0">Where should it go?</h3>
+      <label for="name">Full name</label><input id="name" name="name" value="Sample Buyer" autocomplete="name">
+      <label for="email">Email for the order update</label><input id="email" name="email" type="email" value="buyer@example.com" autocomplete="email">
+      <p class="hint">Used only for this order's shipping update — stated before the field is used, not after.</p>
+      <label for="addr">Street address</label><input id="addr" name="addr" value="222 Sample Street" autocomplete="street-address">
+      <label for="city">City</label><input id="city" name="city" value="Clarksville">
+      <label for="zip">ZIP code</label><input id="zip" name="zip" value="37043">
+      <label>Delivery</label>
+      <label class="check"><input type="radio" name="ship" checked> <span>Standard shipping — $8 flat, arrives in a sample 3–5 business days</span></label>
+      <label class="check"><input type="radio" name="ship"> <span>Studio pickup — free, ready in a sample 2 days (address shown after ordering)</span></label>
+      <p class="hint">Sample checkout — no real order is placed, no payment is taken, and nothing is shipped. This page exists to show the design of the flow.</p>
+      <button class="btn btn-cobalt" type="button" style="width:100%;border:0;cursor:pointer">Place sample order — $74 total</button>
+    </form>
+    <aside class="summary" aria-label="Order summary">
+      <h3 style="margin-top:0">Order summary</h3>
+      <div class="row"><span>Cobalt Rim Dinner Bowl × 1</span><strong>$48</strong></div>
+      <div class="row"><span>Half &amp; Half Espresso Cups (2) × 1</span><strong>$18</strong></div>
+      <div class="row"><span>Subtotal</span><strong>$66</strong></div>
+      <div class="row"><span>Shipping — flat rate</span><strong>$8</strong></div>
+      <p class="hint" style="color:var(--sand)">This basket is $66 before shipping, so the flat $8 applies — orders over $75 ship free, as stated on the shop and product pages. The arithmetic is easy to check line by line: $48 + $18 + $8 = $74.</p>
+      <div class="row total"><span>Total</span><strong>$74</strong></div>
+      <p>Returns: 30 days on unused pieces, in plain words, with the return label cost stated before you send anything back.</p>
+    </aside>
+  </div>
+
+  <section aria-label="Checkout questions">
+    <h2>Plain-word questions</h2>
+    <details><summary>When does my card get charged?</summary><p>In this sample flow, at the moment the order is placed — and the total on the button is the total charged. A live version would repeat that sentence directly above the button.</p></details>
+    <details><summary>What if a piece arrives chipped?</summary><p>Chips and cracks are covered: a photo and one email starts a replacement or refund, your choice. Glaze variation between handmade pieces is not a flaw and is described on every product page before purchase.</p></details>
+    <details><summary>Can I change the address after ordering?</summary><p>Until the shipping label is created, yes — the order update email carries the link. After that, the sample policy says to contact the studio and it will reroute where the carrier allows it.</p></details>
+  </section>
+</div></main>
+<footer><div class="wrap"><p><strong>Arlo Clay Studio</strong> is a fictional business. This is an original portfolio concept by Brittany Nation — no affiliation with any real ceramics studio is claimed. Sample prices, stock counts, and figures throughout.</p><p><a href="https://github.com/BrittanyNation/arlo-clay-shop">View the code on GitHub</a></p></div></footer>
+</body>
+</html>
