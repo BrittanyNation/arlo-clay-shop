@@ -20,7 +20,8 @@ Built to support applications for **Front-End Designer**, **Web Designer**, and 
 - **Honest form design** — sample checkout and product forms that state plainly that no real order is placed and no payment is taken
 - **Accessibility-minded choices** — contrast-safe cobalt/ink/porcelain pairings, badges and selected states that use words, never colour alone, skip link, `aria-current` navigation, real labels on every field, and native `<details>` FAQs
 - **Responsive layout** — product, card, and note grids step down cleanly on small screens, and the checkout summary stacks below the form on mobile
-- **Semantic, framework-free build** — hand-written HTML/CSS, one stylesheet, no JavaScript required, no external images; all product visuals are CSS-only
+- **Semantic, framework-free build** — hand-written HTML/CSS with vanilla JavaScript for the shop logic, one stylesheet, no external images; all product visuals are CSS-only
+- **A shop that actually works** — Add to Cart on every product card; glaze, quantity, and gift-wrap choices on the product page update the price and total live; the cart persists across all three pages (localStorage), supports quantity changes and removal, and always shows correct line totals, shipping, and grand total; the checkout form validates name, email, address, city, and ZIP inline, and placing a sample order ends in a confirmation state with a generated order number and a cleared cart
 
 ## Palette
 
@@ -43,7 +44,7 @@ Built to support applications for **Front-End Designer**, **Web Designer**, and 
 
 ## Workflow note
 
-My design workflow runs in **Sketch and Webflow**, where I design websites and systems visually. This demo is hand-built in HTML/CSS to show the same front-end design thinking — comparison-friendly product cards, honest totals, and plain words — expressed directly in code.
+My design workflow runs in **Sketch and Webflow**, where I design websites and systems visually. This demo is hand-built in HTML/CSS/JS to show the same front-end design thinking — comparison-friendly product cards, honest totals, and plain words — expressed directly in code.
 
 ## Files
 
@@ -51,6 +52,7 @@ My design workflow runs in **Sketch and Webflow**, where I design websites and s
 - `product.html` — product detail page
 - `checkout.html` — cart & checkout page
 - `styles.css` — design tokens and all component styles
+- `shop.js` — cart storage, product option state, checkout totals, validation, and confirmation logic
 - `og-image.png` — 1200×627 social preview image in the project palette
 
 ## Note
