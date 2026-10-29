@@ -27,32 +27,41 @@
     <h1>Your basket, <em>with every cost in the open.</em></h1>
     <p class="lede">A calm checkout page: the items named the same way the shop named them, shipping as its own line instead of a surprise, and the total repeated on the button that finishes the order.</p>
   </section>
-  <div class="grid2">
-    <form aria-label="Checkout details">
+  <div class="grid2" id="checkout-grid">
+    <form id="checkout-form" aria-label="Checkout details" novalidate>
       <h3 style="margin-top:0">Where should it go?</h3>
-      <label for="name">Full name</label><input id="name" name="name" value="Sample Buyer" autocomplete="name">
-      <label for="email">Email for the order update</label><input id="email" name="email" type="email" value="buyer@example.com" autocomplete="email">
+      <label for="name">Full name</label><input id="name" name="name" value="Sample Buyer" autocomplete="name"><p class="error" id="err-name">Please enter the full name for the order.</p>
+      <label for="email">Email for the order update</label><input id="email" name="email" type="email" value="buyer@example.com" autocomplete="email"><p class="error" id="err-email">Please enter a valid email address.</p>
       <p class="hint">Used only for this order's shipping update — stated before the field is used, not after.</p>
-      <label for="addr">Street address</label><input id="addr" name="addr" value="222 Sample Street" autocomplete="street-address">
-      <label for="city">City</label><input id="city" name="city" value="Clarksville">
-      <label for="zip">ZIP code</label><input id="zip" name="zip" value="37043">
+      <label for="addr">Street address</label><input id="addr" name="addr" value="222 Sample Street" autocomplete="street-address"><p class="error" id="err-addr">Please enter the street address.</p>
+      <label for="city">City</label><input id="city" name="city" value="Clarksville"><p class="error" id="err-city">Please enter the city.</p>
+      <label for="zip">ZIP code</label><input id="zip" name="zip" value="37043"><p class="error" id="err-zip">Please enter a valid 5-digit ZIP code.</p>
       <label>Delivery</label>
-      <label class="check"><input type="radio" name="ship" checked> <span>Standard shipping — $8 flat, arrives in a sample 3–5 business days</span></label>
-      <label class="check"><input type="radio" name="ship"> <span>Studio pickup — free, ready in a sample 2 days (address shown after ordering)</span></label>
+      <label class="check"><input type="radio" name="ship" value="standard" checked> <span>Standard shipping — $8 flat, arrives in a sample 3–5 business days</span></label>
+      <label class="check"><input type="radio" name="ship" value="pickup"> <span>Studio pickup — free, ready in a sample 2 days (address shown after ordering)</span></label>
       <p class="hint">Sample checkout — no real order is placed, no payment is taken, and nothing is shipped. This page exists to show the design of the flow.</p>
-      <button class="btn btn-cobalt" type="button" style="width:100%;border:0;cursor:pointer">Place sample order — $74 total</button>
+      <button class="btn btn-cobalt" type="submit" id="place-order-btn" style="width:100%;border:0;cursor:pointer">Place sample order — $74 total</button>
     </form>
     <aside class="summary" aria-label="Order summary">
       <h3 style="margin-top:0">Order summary</h3>
-      <div class="row"><span>Cobalt Rim Dinner Bowl × 1</span><strong>$48</strong></div>
-      <div class="row"><span>Half &amp; Half Espresso Cups (2) × 1</span><strong>$18</strong></div>
-      <div class="row"><span>Subtotal</span><strong>$66</strong></div>
-      <div class="row"><span>Shipping — flat rate</span><strong>$8</strong></div>
-      <p class="hint" style="color:var(--sand)">This basket is $66 before shipping, so the flat $8 applies — orders over $75 ship free, as stated on the shop and product pages. The arithmetic is easy to check line by line: $48 + $18 + $8 = $74.</p>
-      <div class="row total"><span>Total</span><strong>$74</strong></div>
+      <div id="cart-lines"></div>
+      <p class="hint" id="empty-cart-note" style="color:var(--sand)" hidden>Your basket is empty right now — <a href="index.html" style="color:var(--sage)">browse the collection</a> and add a piece to see the lines add up here.</p>
+      <div class="row"><span>Subtotal</span><strong id="co-subtotal">$0</strong></div>
+      <div class="row" id="co-shipping-row"><span>Shipping</span><strong id="co-shipping">$0</strong></div>
+      <p class="hint" id="ship-note" style="color:var(--sand)"></p>
+      <div class="row total"><span>Total</span><strong id="co-total">$0</strong></div>
       <p>Returns: 30 days on unused pieces, in plain words, with the return label cost stated before you send anything back.</p>
     </aside>
   </div>
+
+  <section id="confirmation" class="confirmation" aria-label="Order confirmation" hidden>
+    <h2 style="margin-top:0">Thank you — your sample order is in.</h2>
+    <p>Order number: <strong id="conf-order"></strong></p>
+    <p>Items: <span id="conf-items"></span></p>
+    <p>Total charged in this sample flow: <strong id="conf-total"></strong>. A sample order update would be emailed to <strong id="conf-email"></strong>.</p>
+    <p class="hint">This is a portfolio demo — no real order was placed, no payment was taken, and nothing will be shipped.</p>
+    <p><a class="btn btn-cobalt" href="index.html">Continue shopping →</a></p>
+  </section>
 
   <section aria-label="Checkout questions">
     <h2>Plain-word questions</h2>
@@ -62,5 +71,6 @@
   </section>
 </div></main>
 <footer><div class="wrap"><p><strong>Arlo Clay Studio</strong> is a fictional business. This is an original portfolio concept by Brittany Nation — no affiliation with any real ceramics studio is claimed. Sample prices, stock counts, and figures throughout.</p><p><a href="https://github.com/BrittanyNation/arlo-clay-shop">View the code on GitHub</a></p></div></footer>
+<script src="shop.js"></script>
 </body>
 </html>
