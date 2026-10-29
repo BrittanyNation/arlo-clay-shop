@@ -29,7 +29,7 @@
   </section>
   <div class="grid2">
     <div>
-      <div class="product-visual">COBALT RIM DINNER BOWL — 9 INCH</div>
+      <div class="product-visual" id="product-visual-label">COBALT RIM DINNER BOWL — 9 INCH</div>
       <div class="notes">
         <div class="note"><h3>Size &amp; capacity</h3><p>9 inches across, 3 inches deep. Holds about 24 oz — a big salad, a soup with room to stir, or a generous breakfast bowl.</p></div>
         <div class="note"><h3>Care</h3><p>Food-safe glaze. Dishwasher and microwave safe; hand-washing keeps the rim colour brightest over time.</p></div>
@@ -37,31 +37,33 @@
       </div>
     </div>
     <div>
-      <form aria-label="Choose your bowl">
+      <form id="product-form" aria-label="Choose your bowl">
         <span class="badge badge-cobalt">In this sample batch: 14 available</span>
         <p class="price">$48 <span style="font-size:.95rem;color:var(--muted)">+ $8 flat shipping · free over $75</span></p>
         <label>Glaze</label>
-        <div class="glaze" role="group" aria-label="Glaze options"><span class="selected">Cobalt Rim — selected</span><span>Peach Clay</span><span>Sage Glaze</span></div>
+        <div class="glaze" role="group" aria-label="Glaze options"><button type="button" data-glaze="Cobalt Rim" class="selected" aria-pressed="true">Cobalt Rim — selected</button><button type="button" data-glaze="Peach Clay" aria-pressed="false">Peach Clay</button><button type="button" data-glaze="Sage Glaze" aria-pressed="false">Sage Glaze</button></div>
         <label for="qty">Quantity</label>
-        <select id="qty" name="qty"><option selected>2 — one for each place setting</option><option>1</option><option>3</option><option>4</option></select>
-        <label class="check"><input type="checkbox"> <span>Add gift wrap and a handwritten note (+ $4)</span></label>
-        <label class="check"><input type="checkbox" checked> <span>Email me when the matching side plates restock (no other emails)</span></label>
+        <select id="qty" name="qty"><option value="2" selected>2 — one for each place setting</option><option value="1">1</option><option value="3">3</option><option value="4">4</option></select>
+        <label class="check"><input type="checkbox" id="giftwrap"> <span>Add gift wrap and a handwritten note (+ $4)</span></label>
+        <label class="check"><input type="checkbox" id="restock" checked> <span>Email me when the matching side plates restock (no other emails)</span></label>
         <p class="hint">Sample form — no real order is placed and no payment is taken on this portfolio page.</p>
-        <a class="btn btn-cobalt" href="checkout.html" style="display:block;text-align:center">Add 2 bowls — $96 before shipping →</a>
+        <button class="btn btn-cobalt" type="submit" id="add-bowl-btn" style="display:block;width:100%;text-align:center;border:0;cursor:pointer">Add 2 bowls — $96 before shipping →</button>
       </form>
-      <div class="summary" style="margin-top:1rem"><p><strong>Why the total will match</strong></p><p>Two bowls at $48 are $96, which clears the $75 free-shipping threshold — so the checkout page shows $96 all-in for this item, with no shipping added later. The cart page in this set proves it with a smaller basket, where the $8 is shown as its own line.</p></div>
+      <div class="summary" style="margin-top:1rem"><p><strong>Why the total will match</strong></p><p id="total-note">Two bowls at $48 are $96, which clears the $75 free-shipping threshold — so the checkout page shows $96 all-in for this item, with no shipping added later. The cart page in this set proves it with a smaller basket, where the $8 is shown as its own line.</p></div>
     </div>
   </div>
 
   <section aria-label="Pairs well with">
     <h2>Pairs well with</h2>
     <div class="grid3">
-      <article class="card"><div class="card-visual v-sage">SAGE PLATES</div><div class="card-body"><h3>Sage Side Plates</h3><p>Four 7-inch plates that sit quietly next to the cobalt rim.</p><p class="price">$52 / set of 4</p><a class="btn btn-ghost" href="index.html">Back to the shop</a></div></article>
-      <article class="card"><div class="card-visual v-peach">PEACH MUGS</div><div class="card-body"><h3>Peach Clay Mug Set</h3><p>Two 12 oz mugs for the same table, in the warm half of the palette.</p><p class="price">$36 / set of 2</p><a class="btn btn-ghost" href="index.html">Back to the shop</a></div></article>
-      <article class="card"><div class="card-visual v-mix">ESPRESSO CUPS</div><div class="card-body"><h3>Half &amp; Half Espresso Cups</h3><p>The cobalt and peach glazes together, in the smallest piece in the set.</p><p class="price">$18 / set of 2</p><a class="btn btn-ghost" href="index.html">Back to the shop</a></div></article>
+      <article class="card"><div class="card-visual v-sage">SAGE PLATES</div><div class="card-body"><h3>Sage Side Plates</h3><p>Four 7-inch plates that sit quietly next to the cobalt rim.</p><p class="price">$52 / set of 4</p><button type="button" class="btn btn-cobalt" data-add-to-cart="sage-plates">Add to cart</button> <a class="btn btn-ghost" href="index.html">Back to the shop</a></div></article>
+      <article class="card"><div class="card-visual v-peach">PEACH MUGS</div><div class="card-body"><h3>Peach Clay Mug Set</h3><p>Two 12 oz mugs for the same table, in the warm half of the palette.</p><p class="price">$36 / set of 2</p><button type="button" class="btn btn-cobalt" data-add-to-cart="peach-mugs">Add to cart</button> <a class="btn btn-ghost" href="index.html">Back to the shop</a></div></article>
+      <article class="card"><div class="card-visual v-mix">ESPRESSO CUPS</div><div class="card-body"><h3>Half &amp; Half Espresso Cups</h3><p>The cobalt and peach glazes together, in the smallest piece in the set.</p><p class="price">$18 / set of 2</p><button type="button" class="btn btn-cobalt" data-add-to-cart="espresso-cups">Add to cart</button> <a class="btn btn-ghost" href="index.html">Back to the shop</a></div></article>
     </div>
   </section>
 </div></main>
 <footer><div class="wrap"><p><strong>Arlo Clay Studio</strong> is a fictional business. This is an original portfolio concept by Brittany Nation — no affiliation with any real ceramics studio is claimed. Sample prices, stock counts, and figures throughout.</p><p><a href="https://github.com/BrittanyNation/arlo-clay-shop">View the code on GitHub</a></p></div></footer>
+<div id="cart-status" class="sr-only" role="status" aria-live="polite"></div>
+<script src="shop.js"></script>
 </body>
 </html>
